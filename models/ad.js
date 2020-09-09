@@ -4,7 +4,6 @@ const adSchema = mongoose.Schema({
     name: String,
     price: Number,
     location: String,
-
     date: String
 })
 
