@@ -10,7 +10,7 @@ const { v4: uuidv4 } = require('uuid');
 const mongoose = require('mongoose');
 const { Ad } = require('../models/ad');
 const { User } = require('../models/user');
-const dburi = process.env.MONGO_URI || 'mongodb://localhost/adsdatabase'
+const dburi = process.env.MONGO_URI || 'mongodb://lena:lena123@ds147946.mlab.com:47946/heroku_g2rj1tq8'
 
 
 mongoose.connect(dburi);
