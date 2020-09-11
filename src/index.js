@@ -10,10 +10,14 @@ const { v4: uuidv4 } = require('uuid');
 const mongoose = require('mongoose');
 const { Ad } = require('../models/ad');
 const { User } = require('../models/user');
-const dburi = process.env.MONGO_URI || 'mongodb://localhost/adsdatabase'
+//const dburi =
 
 
-mongoose.connect(dburi);
+mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/adsdatabase', {
+
+    userNewUrlParser: true,
+    useUnifiedTopology: true
+});
 
 // defining the Express app
 const app = express();
