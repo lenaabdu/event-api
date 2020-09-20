@@ -13,7 +13,7 @@ const { User } = require('../models/user');
 //const dburi =
 
 
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/adsdatabase', {
+mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/database', {
 
     userNewUrlParser: true,
     useUnifiedTopology: true
@@ -21,7 +21,7 @@ mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/adsdatabase', {
 
 // defining the Express app
 const app = express();
-const port = process.env.PORT || 3001
+const port = process.env.PORT || 3004
 
 // adding Helmet to enhance your API's security
 app.use(helmet());
